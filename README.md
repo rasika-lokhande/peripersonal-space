@@ -18,10 +18,40 @@ Spatial encoding of reach action target: An investigation into its body-part cen
 ## 📋 Abstract
 One of the fundamental human abilities involved in human-environment interaction is extending one’s arm to make physical contact with an object. To perform a successful reaching action, the agent’s cognitive system must encode the spatial location of the target. Peri-personal space is the region of space surrounding the agent’s body where reach targets are located. One of the characteristics of peri-personal space is that the objects in this region of space are encoded with respect to the region of the body-surface that is in close proximity to the object. In addition, action-relevant body parameters, such as the position and structure of the limbs, are encoded in a body representation which is constructed by integrating visual and proprioceptive sensory information about the body.
 
+### Research Question 
 Considering the above, this thesis investigates the following two questions. Firstly, is the spatial information of the reach target encoded relative to the body part located proximally, even if that body part is not the effector performing the reach action? Secondly, if the answer to the first question is affirmative, how does the integration of visuo-proprioceptive signals regarding the proximal body part contribute to the spatial encoding of the target?
 
-To investigate these questions, two experiments were conducted in an immersive virtual reality set-up, in which a reach task was performed while the action hand was rendered invisible. Visual and proprioceptive information of the proximal body part was manipulated as the experimental conditions, and the accuracy of reaches was measured. The results of the two experiments indicate that the spatial encoding of the reach target occurs relative to the proximal body-part, and that the integration of the proximal body-part’s visual and proprioceptive sensory signals underlies the spatial encoding of the reach target’s location. However, the results further suggest that the spatial encoding of the target occurs relative to the body-part location indicated by its visual signal, as opposed to the body-part position inferred after the integration of multi-sensory signals.
+<img src="thesis_latex/Images/ms_mechanisms.png" alt="Two hypothesis regarding spatial encoding mechanisms" width="600">
 
-![](thesis_latex/Images/ms_mechanisms.png)
 Fig: Two hypothesis regarding spatial encoding of the reach target. In A), the filled hand denotes the hand position inferred from the multi-sensory integration of visual and proprioceptive uni-sensory signals. The target’s spatial location is encoded relative to this inferred hand position. In B), The target’s spatial location is encoded relative to the visual signal in the visual space. The visual space is then integrated with the proprioceptive space to construct a multi-sensory representation of body-schema and surrounding peri-personal space.
+
+### Experimental setup
+
+To investigate these questions, two experiments were conducted in an immersive virtual reality set-up, in which a reach task was performed while the action hand was rendered invisible. Visual and proprioceptive information of the proximal body part was manipulated as the experimental conditions, and the accuracy of reaches was measured. 
+
+_Fig: Experiment 1 task_
+
+<img src="thesis_latex/Images/exp1_task.png" alt="" width="600">
+
+
+_Fig: Experiment 2 task_
+
+<img src="thesis_latex/Images/exp2_task.png" alt="" width="600">
+
+
+
+### Results
+The results of the two experiments indicate that the spatial encoding of the reach target occurs relative to the proximal body-part, and that the integration of the proximal body-part’s visual and proprioceptive sensory signals underlies the spatial encoding of the reach target’s location. However, the results further suggest that the spatial encoding of the target occurs relative to the body-part location indicated by its visual signal, as opposed to the body-part position inferred after the integration of multi-sensory signals.
+
+_Fig: Experiment 1 results_ 
+
+<img src="thesis_latex/Images/exp1-mre.png" alt="" width="600"> 
+
+
+_Fig: Experiment 2 results_ 
+
+<img src="thesis_latex/Images/exp2_re-aht.png" alt="" width="600">
+
+
+
 
