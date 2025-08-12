@@ -11,6 +11,9 @@ Spatial encoding of reach action target: An investigation into its body-part cen
 1. Is spatial information of reach targets encoded relative to proximally located body parts, even when that body part isn't performing the reach?
 2. How does visuo-proprioceptive integration of the proximal body part contribute to target spatial encoding?
 
+## 🏷️ Keywords
+`peri-personal-space` `spatial-cognition` `multi-sensory-integration` `body-schema` `VR-experiments` `cognitive-science` `motor-control`
+
 ## 📋 Abstract
 One of the fundamental human abilities involved in human-environment interaction is extending one’s arm to make physical contact with an object. To perform a successful reaching action, the agent’s cognitive system must encode the spatial location of the target. Peri-personal space is the region of space surrounding the agent’s body where reach targets are located. One of the characteristics of peri-personal space is that the objects in this region of space are encoded with respect to the region of the body-surface that is in close proximity to the object. In addition, action-relevant body parameters, such as the position and structure of the limbs, are encoded in a body representation which is constructed by integrating visual and proprioceptive sensory information about the body.
 
