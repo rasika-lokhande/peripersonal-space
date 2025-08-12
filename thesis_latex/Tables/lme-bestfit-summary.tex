@@ -1,0 +1,29 @@
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{lrrrrrr}
+        \hline
+        Groups & Name & Variance & Std.Dev. & Corr \\ \hline
+        pid & (Intercept) & 7.74261 & 2.7826 & ~ \\ 
+        ~ & discrepancy & 0.01535 & 0.1239 & 0.05 \\ 
+        Residual & ~ & 11.43551 & 3.3816 \\ \hline
+    \end{tabular}
+    \label{table:lme-bestfit-randomeffects}
+    \caption{Random effects for the best-fit model}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{lrrrrrr}
+        \hline
+        & Estimate & Std. Error & df & t value &  $Pr(>|t|)$     & ~ \\ \hline
+        (Intercept) & 0.0391762 & 0.6712434 & 22.9858763 & 0.058 & 0.954 & ~ \\ 
+        discrepancy & -0.2634481 & 0.0383537 & 58.0775067 & -6.869 & 4.83595E-09 &  *** \\ 
+        AHT & -0.0556558 & 0.0077649 & 5365.490895 & -7.168 & 8.67E-13 &  *** \\ 
+        discrepancy:AHT & -0.0041789 & 0.0009624 & 5369.621227 & -4.342 & 1.43692E-05 &  *** \\ \hline
+    \end{tabular}
+    \label{table:lme-bestfit-fixedeffect}
+    \caption{Fixed effects estimates for the best-fit model}
+\end{table}

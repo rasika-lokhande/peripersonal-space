@@ -1,0 +1,28 @@
+\chapter{Experiment 2: Data Analysis} 
+\label{App-exp2-analysis} 
+\lhead{Appendix B. \emph{Experiment 2: Data Analysis}} 
+
+\section{Linear Mixed effects model comparisons}
+\input{Tables/model-comparisons.tex}
+
+\section{Best fit model summary}
+\input{Tables/lme-bestfit-summary}
+
+\section{Assumptions for best-fit LME Model}
+\subsection{Absence of Collinearity}
+\input{Tables/collinearity.tex}
+\subsection{Normality of residuals}
+\input{Figures/lme-normality.tex}
+\subsection{Homoscedasticity}
+\input{Figures/lme-residual.tex}
+ 
+
+
+
+\section{Results of Bootstraps estimates}
+\input{Tables/bootstrap.tex}
+
+
+
+
+

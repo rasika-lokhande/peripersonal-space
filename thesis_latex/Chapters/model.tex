@@ -1,0 +1,91 @@
+\chapter{Model}
+\label{model}
+\lhead{Chapter 2. \emph{Model}} 
+
+\section{Introduction}
+One of the ways to understand perception, is that perception is an inferential process, in which the agent attempts to infer the most probable state of the world, by using the sensory inputs and previous knowledge that it possesses regarding the state of the world. 
+
+Thus, in the case of reaching action, one of the computational problems that the agent's cognitive system needs to solve is to infer the location of the target, when raw sensory inputs (here, visual) about the target are provided.  
+
+This computation can be modelled using a simple Bayesian approach. For every possible target location, the system assigns a probability regarding how likely that particular target location is. The estimated target location is the location with the highest probability. 
+The allocation of probabilities to different target locations is done in two parts.
+
+\begin{enumerate}
+
+\item Probabilities are assigned on basis of the raw sensory input of the target. If the actual location of the target is $s$, highest probability will be assigned to the location $s$. However, since there is noise inherently present in the system, probabilities are assigned to other locations as well. Mathematically, this probability distribution function may follow a normal distribution which is centered (mean) at $s$, and with variance $ \sigma_m^2$ , which represents the noise or the measurement error in the system. Therefore,
+
+$ P(x|s) = N(x; s, \sigma_m^2) $, where x is the observation, and s is the actual location of the target. 
+
+\item Probabilities are assigned on basis of the prior knowledge which the agent possesses regarding how likely each target locations are. This probability distribution does not take into account the actual location of the target, but merely represents the prior beliefs that the agent possess about how likely each target location is. If each location is equally likely, $ P(s) = U(a,b)$ , where a and b are the bounds to the target location space.
+
+\end{enumerate}
+
+The process of inference involves combining the information from observation (likelihood distribution) and expectation (prior distribution). This posterior probability distribution represents the systems beliefs for the probability of each possible location for the target.   
+
+
+\section{The Bayesian Model}
+
+We claim that, in situations of uncertainty, the body schema acts as a prior and influences the belief that certain target locations are more likely than the others. We are modelling these prior beliefs as a normal distribution function, with parameters, $\mu_p$ and $\sigma_p^2$. $\mu_p$ represents which target location is believed to be most likely. $\sigma_p^2$ denotes the confidence the agent has in the prior. Higher value of  $\sigma_p^2$ , that is a flatter prior distribution indicates that the prior is not very informative, and the sensory observation (likelihood distribution) will be more informative. The intuition behind this is that, the prior biases the posterior away from the sensory measurement, but the magnitude of this "pull" would depend upon how sharp or flat the prior distribution is. 
+
+
+
+Prior distribution : $ P(s_{hyp}) = N(s_{hyp};  \mu_p,  \sigma_p^2) $ \\
+Likelihood function : $ P(x|s_{hyp}) = N(x;  s_{hyp},  \sigma_m^2) $ \\
+Posterior distribution : $ P(s_{hyp} | x) = N ( s_{hyp};  \frac{J_p \mu_p + J_m x}{J_p + J_m} ,  \frac{1}{J_p + J_m}$ ) 
+
+where, \\
+$ J_p = \frac{1}{\sigma_p^2}$ \\
+$ J_m = \frac{1}{\sigma_m^2}$ \\
+$x$ = Noisy sensory observation \\
+$s_{hyp}$ = Hypothesized location of the target \\
+
+
+Ultimately, the estimated target location is equivalent to the mean of the posterior distribution, that is, the value of $s_{hyp}$ which has the highest probability assigned to it. Thus, the estimated target location is given by,
+$\hat{s} = \frac{J_p \mu_p + J_m x}{J_p + J_m} $ 
+This is the response that the agent indicates in the target location estimation task.
+
+\subsection{Response distribution}
+
+Assume that the actual location of the stimuli is $s$. For a given $s$, the noisy sensory measurement of the target $x$ is not a constant, but a random variable. Therefore, on repeated presentation of the target at a particular location $s$, the estimated target location $\hat{s}$ will be a random variable, with an associated probability distribution.
+
+Using properties of linear combination of random variables, this distribution is given by,
+
+\begin{equation} \label{eq:rd}
+     P(\hat{s} | s) = N (\hat{s};  \frac{J_p \mu_p + J_m s}{J_p + J_m} , \frac{J_m}{(J_p + J_m)^2} ) 
+\end{equation}
+
+
+
+\section{Claim}
+
+We claim that when the action hand is invisible, the beliefs will be biased for target locations near the action hand, that is, the prior mean will be nearer to the action hand. This may explain the behavioural results of displacement of estimated target locations towards the action hand. Furthermore, we hypothesize that the the different non-action hand conditions will affect the prior variance. X condition should exhibit least prior variance and PV condition should exhibit higher prior variance. Since prior variance denotes the confidence that the subject has in the prior information, we claim that the visuo-proprioceptive information of the non-action hand reduces the bias induced by the uncertainty due to the non-visible non-action hand by decreasing the confidence in this bias.
+
+
+To summarize,
+
+\begin{enumerate}
+    \item When action hand is visible, no uncertainty, no bias towards the action hand.
+    \item When action hand is invisible, higher uncertainty, therefore estimated target locations are biased towards the action-hand. $\mu_p$ will be near to the action hand
+    \item When non-action hand visuo-proprioceptive information is available, the confidence in the bias induced by the non-visible action hand is reduced (high $\sigma_p$ ). Thus, the agents are more accurate in estimating the target location in PV condition.
+\end{enumerate}
+
+
+\section{Model fitting}
+
+We fit the response distribution model given in Equation \ref{eq:rd} to the behavioural data. For each participant, and for each block condition, we estimated the two parameters $\mu_p$ and $\sigma_p$. The values of $\sigma_m$ were determined experimentally by calculating the standard deviation of the estimated target location in the Practice block, when the action hand was visible. The reasoning behind this is that, when action hand is visible, there is no bias induced due to uncertainty which reflects in the information captured in the prior distribution. Thus, the variability is the responses should mirror the variability in the measurement distribution (that is, the likelihood distribution).
+
+\section{Further steps}
+
+\begin{enumerate}
+    \item Simulate how model behaves for different values of parameters. Check if my model can capture my hypothesis. DONE. I have inputted various values of the parameters into the model and simulated the response distribution. The model behaviour is consistent with my hypothesis.
+    
+    \item Recover parameters for different values of parameters. DONE! Parameter recovery is happening. 
+    
+    \item Fit the model to the data. DONE. I have got some estimates of the parameters. For estimating the parameters, I have set the bounds of sig.p as [0.001, Inf) and mu.p as [0, -46]. 
+    
+    \item Is my model a good fit to the data? Stuck here. How do I figure this out?
+    
+    \item While identifying outliers in the estimated sig.p values, 5 extreme outliers were identified.
+    
+    
+\end{enumerate}

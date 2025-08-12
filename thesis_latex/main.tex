@@ -1,0 +1,142 @@
+\documentclass[11pt, a4paper, oneside]{Thesis} 
+\usepackage{floatrow}
+\floatsetup[table]{capposition=bottom}
+\usepackage{textcomp}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{graphicx, subfigure}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{csquotes}
+\usepackage{pdfpages}
+\usepackage{lipsum}  
+\usepackage{acronym}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+\usepackage{apacite}
+%\usepackage{natbib}
+\bibliographystyle{apacite} % Use the "custom" BibTeX style for formatting the Bibliography
+
+
+
+
+\makeatletter
+\AtBeginDocument{%
+  \renewcommand*{\AC@hyperlink}[2]{%
+    \begingroup
+      \hypersetup{hidelinks}%
+      \hyperlink{#1}{#2}%
+    \endgroup
+  }%
+}
+\makeatother
+
+
+\graphicspath{{Images/}} 
+%\usepackage[square, numbers]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' v
+\hypersetup{urlcolor=black, colorlinks=true} 
+\title{\ttitle} 
+\begin{document}
+\makeatletter
+\renewcommand*{\NAT@nmfmt}[1]{\textsc{#1}}
+\makeatother
+\frontmatter
+\setstretch{1.6} 
+\fancyhead{} 
+\rhead{\thepage}
+\lhead{}
+\pagestyle{fancy} 
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%\captionsetup[figure]{labelfont={bf},name={Figure},labelsep=period}
+\captionsetup[figure]{labelfont={bf},name={Figure}}
+\captionsetup[table]{labelfont={bf}, name = {Table}}
+\captionsetup[table]{position=bottom} 
+
+\input{Other Chapters/titlepage}
+
+\Declaration{\addtocontents{toc}{\vspace{1em}}}
+\setcounter{page}{2}
+
+\input{Other Chapters/certificate}
+\input{Other Chapters/declaration}
+
+
+
+\lhead{\emph{Abstract}}
+\abstract{\addtocontents{toc}{\vspace{1em}} 
+\input{Other Chapters/abstract}
+}
+\input{Other Chapters/acknowledgements}
+\input{Other Chapters/tableofcontents}
+
+
+
+\clearpage 
+\setstretch{1.5} 
+\lhead{\emph{Abbreviations}} 
+
+%\chapter*{Abbreviations}
+%\addtotoc{Abbreviations}
+%\input{Other Chapters/acro_list}
+
+\clearpage 
+\setstretch{1.3} 
+\pagestyle{empty} 
+\dedicatory{Dedicated to my Guru, Dr. Vishnu Ramachandra Parnerkar} % Dedication text
+\addtocontents{toc}{\vspace{2em}} 
+
+%	THESIS CONTENT - CHAPTERS
+
+\mainmatter
+\pagestyle{fancy} 
+
+\input{Chapters/introduction.tex}
+\input{Chapters/Literature review}
+\input{Chapters/Experiment 1}
+%\input{Chapters/model}
+%\input{Chapters/Experiment 2}
+\input{Chapters/Experiment 2 v2.0}
+\input{Chapters/Discussion.tex}
+
+
+
+%APPENDICES
+
+\addtocontents{toc}{\vspace{2em}} 
+
+\appendix 
+\input{Appendices/Experiment-1-App.tex}
+\input{Appendices/Experiment-2-Analysis.tex}
+\input{Appendices/bci-appendix}
+\include{Appendices/vr-disclaimer}
+
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+
+%	BIBLIOGRAPHY
+
+%\nocite{*}
+\label{Bibliography}
+
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+%\bibliographystyle{apacite} % Use the "custom" BibTeX style for formatting the Bibliography
+%\setcitestyle{authoryear,open={((},close={))}} %Citation-related commands
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+%\bibliographystyle{apalike}
+
+\end{document}  

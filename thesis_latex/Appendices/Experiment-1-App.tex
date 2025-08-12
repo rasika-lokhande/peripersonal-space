@@ -1,0 +1,72 @@
+\chapter{Experiment 1: Data Analysis} 
+\label{App-exp1-analysis} 
+\lhead{Appendix A. \emph{Experiment 1: Data Analysis}} 
+
+\section{Assumptions of Repeated Measures ANOVA}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{rlrrl}
+  \hline
+ & Effect & W & p & p$<$.05 \\ 
+  \hline
+1 & block & 0.90 & 0.87 &  \\ 
+  2 & sti\_pos & 0.25 & 0.00 & * \\ 
+  3 & block:sti\_pos & 0.14 & 0.02 & * \\ 
+   \hline
+\end{tabular}
+\caption{Mauchly's Test for Sphericity}
+\label{}
+\end{table}
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{rlrlrlrlrl}
+  \hline
+ & Effect & GGe & DF[GG] & p[GG] & p[GG]$<$.05 & HFe & DF[HF] & p[HF] & p[HF]$<$.05 \\ 
+  \hline
+1 & block & 0.94 & 2.81, 56.17 & 0.02 & * & 1.10 & 3.31, 66.29 & 0.02 & * \\ 
+  2 & sti\_pos & 0.57 & 1.14, 22.89 & 0.00 & * & 0.58 & 1.17, 23.37 & 0.00 & * \\ 
+  3 & block:sti\_pos & 0.60 & 3.62, 72.38 & 0.23 &  & 0.75 & 4.52, 90.35 & 0.22 &  \\ 
+   \hline
+\end{tabular}}
+\caption{Spericity Corrections}
+\label{}
+\end{table}
+
+\section{Post-hoc Analysis Results}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{rlllrrrrrrl}
+  \hline
+ & .y. & group1 & group2 & n1 & n2 & statistic & df & p & p.adj & p.adj.signif \\ 
+  \hline
+1 & avg\_mre & L & C &  21 &  21 & 2.06 & 20.00 & 0.05 & 0.05 & ns \\ 
+  2 & avg\_mre & L & R &  21 &  21 & 3.22 & 20.00 & 0.00 & 0.01 & ** \\ 
+  3 & avg\_mre & C & R &  21 &  21 & 3.73 & 20.00 & 0.00 & 0.00 & ** \\ 
+   \hline
+\end{tabular}
+\caption{Pair-wise t test between levels of Target Position. Adjusted P-values are Holm-Bonferroni corrected.}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{rlllrrrrrrl}
+  \hline
+ & .y. & group1 & group2 & n1 & n2 & statistic & df & p & p.adj & p.adj.signif \\ 
+  \hline
+1 & avg\_mre & X & PV &  21 &  21 & 2.94 & 20.00 & 0.01 & 0.05 & * \\ 
+  2 & avg\_mre & PV & P &  21 &  21 & -2.55 & 20.00 & 0.02 & 0.10 & ns \\ 
+  3 & avg\_mre & PV & V &  21 &  21 & -1.51 & 20.00 & 0.15 & 0.59 & ns \\ 
+  4 & avg\_mre & V & P &  21 &  21 & -1.32 & 20.00 & 0.20 & 0.61 & ns \\ 
+  5 & avg\_mre & X & V &  21 &  21 & 1.31 & 20.00 & 0.20 & 0.41 & ns \\ 
+  6 & avg\_mre & X & P &  21 &  21 & -0.14 & 20.00 & 0.89 & 0.89 & ns \\ 
+   \hline
+\end{tabular}}
+\caption{Pair-wise t test between levels of Visuo-proprioceptive information of Non-action hand. Adjusted P-values are Holm-Bonferroni corrected.}
+\end{table}

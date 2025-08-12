@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llrr}
+  \hline
+  Model & Fixed effect & AIC & BIC \\
+  \hline
+  Null Model & None &	28746 &	28779 \\
+  Discrepancy Model & Discrepancy	& 28731	& 28770 \\
+  AHT Model & AHT &	28698 &	28737 \\
+  Additive Model & Discrepancy + AHT	& 28683	& 28729 \\
+  \textbf{Interaction Model} & \textbf{Discrepancy + AHT + (Discrepancy * AHT)} & \textbf{28666} & \textbf{28719}\\
+   \hline
+\end{tabular}}
+\caption{AIC and BIC Values for fitted Linear Mixed Effect models. Random effects of all models consisted of intercepts for subjects and by-subject random slopes for effect of discrepancy ( $1 + discrepancy | subject$ ). The interaction model has the lowest AIC and BIC value. }
+\label{table:lme-models}
+\end{table}
+
+  
+ 
